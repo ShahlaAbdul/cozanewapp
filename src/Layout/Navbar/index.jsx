@@ -43,27 +43,27 @@ function Navbar() {
                 <NavLink to={"/"} className={"page"}>
                   Home
                 </NavLink>
-                <NavLink to={"/"} className={"page"}>
+                <NavLink to={"/shop"} className={"page"}>
                   Shop
                 </NavLink>
-                <NavLink to={"/"} className={"page"}>
+                <NavLink to={"/features"} className={"page"}>
                   Features <sup>hot</sup>
                 </NavLink>
-                <NavLink to={"/"} className={"page"}>
+                <NavLink to={"/blog"} className={"page"}>
                   Blog
                 </NavLink>
-                <NavLink to={"/"} className={"page"}>
+                <NavLink to={"/about"} className={"page"}>
                   About
                 </NavLink>
-                <NavLink to={"/"} className={"page"}>
+                <NavLink to={"/contact"} className={"page"}>
                   Contact
                 </NavLink>
               </div>
             </div>
 
             <div className="navbarRight">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <NavLink to={"/basket"}><i className="fa-solid fa-cart-shopping"></i></NavLink>
+              <i className="fa-solid fa-magnifying-glass"></i>
               <NavLink
                 to={"/wishlist"}><i class="fa-regular fa-heart"></i></NavLink>
                 

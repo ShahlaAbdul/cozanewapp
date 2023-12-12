@@ -1,56 +1,59 @@
 import React, { useState } from 'react';
 import './style.scss'
+import { Carousel } from 'react-carousel-minimal';
+import HomeButon from '../HomeButton1';
 
 function HomePageSlider() {
 
-    const slides = [
+    const data = [
       {
-        url: "https://preview.colorlib.com/theme/cozastore/images/slide-01.jpg.webp",
+        image: "https://preview.colorlib.com/theme/cozastore/images/slide-01.jpg.webp",
       },
       {
-        url: "https://preview.colorlib.com/theme/cozastore/images/slide-02.jpg.webp",
+        image: "https://preview.colorlib.com/theme/cozastore/images/slide-02.jpg.webp",
       },
       {
-        url: "https://preview.colorlib.com/theme/cozastore/images/slide-03.jpg.webp",
+        image: "https://preview.colorlib.com/theme/cozastore/images/slide-03.jpg.webp",
       },
     ];
-    const [index, setIndex] = useState([])
 
-    const prevSlide = () => {
-        const isfirstSlide = index === 0;
-        const newIndex = isfirstSlide ? slides.length - 1 : index - 1;
-        setIndex(newIndex)
-    }
-     const nextSlide = () => {
-       const isLastSlide = index === slides.length - 1;
-       const newIndex = isLastSlide ? 0 : index + 1;
-       setIndex(newIndex);
-     };
+    
   return (
-    <div>
-      <div className="slidesContainer">
-        <div
-          className="slides"
-          style={{
-            backgroundImage: `url(${slides[index].url})`,
-            backgroundSize: " cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-          }}
-        >
-          <div className="arrow">
-            <div className="Arrowleft">
-              <i class="fa-solid fa-caret-left" onClick={prevSlide}></i>
-            </div>
+    <div className="App">
+      <div style={{ textAlign: "center", }}>
+      <div className='homebtn'>
+         <HomeButon text={"QUICK START"} bgcolor={"blue"}></HomeButon>
+         </div>
+      
+        <div style={{
+        
+        }}>
+          <Carousel 
+            data={data}
+            time={2000}
+            width="100%"
+            height="800px"    
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            style={{
+              textAlign: "center",
+      
+              maxHeight: "500px",
 
-            <div className="Arrowright">
-              <i class="fa-solid fa-caret-right" onClick={nextSlide}></i>
-            </div>
-          </div>
+            }}
+            
+          />
+        
         </div>
+        
       </div>
     </div>
   );
 }
 
 export default HomePageSlider;
+
+
+

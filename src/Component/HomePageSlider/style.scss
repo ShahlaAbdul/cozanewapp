@@ -1,24 +1,6 @@
-.slidesContainer{
-    height: 80vh;
-    max-width: 100%;
-
-    .slides{
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-       
-        
-    }
-    .arrow{
-        width: 90%;
-        margin: 0 auto;
-        font-size: 40px;
-        padding-top: 20%;
-        display: flex;
-        justify-content: space-between;
-        :hover{
-            color: #695eaf;
-        }
-       
-    }
+.homebtn{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  z-index: 1;
 }
