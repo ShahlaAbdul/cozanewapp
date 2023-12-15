@@ -1,0 +1,18 @@
+.aboutContainer{
+    background-image: url("https://preview.colorlib.com/theme/cozastore/images/bg-01.jpg.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    .abouthead{
+        height: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight:bolder;
+        font-size: 30px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
